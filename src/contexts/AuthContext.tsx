@@ -40,10 +40,10 @@ const AuthProvider = ({ children }: Props) => {
 
   useEffect(() => {
     async function getWhoAmI() {
-      try {
-        const res = await WhoAmIRequest();
+      const res = await WhoAmIRequest();
+      if (res !== "" && res) {
         setAuthStatus(AuthStatus.SignedIn);
-      } catch (e) {
+      } else {
         setAuthStatus(AuthStatus.SignedOut);
       }
     }

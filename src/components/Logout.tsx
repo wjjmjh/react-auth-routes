@@ -9,6 +9,7 @@ const Logout: React.FC = () => {
   return (
     <button
       onClick={async () => {
+        localStorage.setItem("username", "");
         authContext.signOut();
         window.location.href = "/login";
       }}

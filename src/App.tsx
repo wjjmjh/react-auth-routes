@@ -29,6 +29,7 @@ export default function App() {
       <AuthIsNotSignedIn>
         <Router>
           <Routes>
+            <Route path={"/"} element={<Login />} />
             <Route path={"/login"} element={<Login />} />
             <Route path={"/unprotected"} element={<Unprotected />} />
             <Route path="/*" element={<Navigate replace to={"/login"} />} />

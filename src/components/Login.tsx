@@ -24,8 +24,7 @@ const Login: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    // You can add your login logic here
-    console.log("Login with:", credentials);
+    localStorage.setItem("username", credentials.username);
     authContext.signIn();
     window.location.href = "/protected";
   };
