@@ -2,6 +2,7 @@ import Login from "@/components/Login";
 import Logout from "@/components/Logout";
 import Protected from "@/components/Protected";
 import Unprotected from "@/components/Unprotected";
+import WhoAmI from "@/components/whoami";
 import AuthProvider, {
   AuthIsNotSignedIn,
   AuthIsSignedIn,
@@ -23,6 +24,7 @@ export default function App() {
             <Route path={"/login"} element={<Login />} />
             <Route path={"/logout"} element={<Logout />} />
             <Route path={"/protected"} element={<Protected />} />
+            <Route path={"/whoami"} element={<WhoAmI />} />
           </Routes>
         </Router>
       </AuthIsSignedIn>

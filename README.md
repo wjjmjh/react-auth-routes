@@ -1,3 +1,3 @@
 # react-auth-routes
 
-## The elegant way to protect your React routes via authentication.
+## The elegant way to protect your React routes via authentication context.
