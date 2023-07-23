@@ -19,6 +19,7 @@ export default function App() {
       <AuthIsSignedIn>
         <Router>
           <Routes>
+            <Route path={"/login"} element={<Login />} />
             <Route path={"/logout"} element={<Logout />} />
             <Route path={"/protected"} element={<Protected />} />
           </Routes>
