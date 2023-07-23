@@ -2,7 +2,7 @@ import Login from "@/components/Login";
 import Logout from "@/components/Logout";
 import Protected from "@/components/Protected";
 import Unprotected from "@/components/Unprotected";
-import WhoAmI from "@/components/whoami";
+import WhoAmI from "@/components/WhoAmI";
 import AuthProvider, {
   AuthIsNotSignedIn,
   AuthIsSignedIn,
