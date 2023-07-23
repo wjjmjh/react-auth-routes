@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { AuthContext } from "@/contexts/AuthContext";
+import React, { useContext, useState } from "react";
 
 interface LoginCredentials {
   username: string;
@@ -6,6 +7,8 @@ interface LoginCredentials {
 }
 
 const Login: React.FC = () => {
+  const authContext = useContext(AuthContext);
+
   const [credentials, setCredentials] = useState<LoginCredentials>({
     username: "",
     password: "",
@@ -23,6 +26,8 @@ const Login: React.FC = () => {
     e.preventDefault();
     // You can add your login logic here
     console.log("Login with:", credentials);
+    authContext.signIn();
+    window.location.href = "/protected";
   };
 
   return (
